@@ -10,11 +10,8 @@ public class StatsService {
     }
 
     public long averageSales(long[] purchases) {
-        long sum = 0;
-        for (long purchase : purchases) {
-            sum += purchase;
-        }
-        long average = sum / purchases.length;
+
+        long average = salesSum(purchases) / purchases.length;
         return average;
     }
 
