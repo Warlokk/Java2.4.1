@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
+    long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
     void salesSum() {
         StatsService service = new StatsService();
 
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 180;
 
         long actual = service.salesSum(purchases);
@@ -22,7 +22,6 @@ class StatsServiceTest {
     void averageSales() {
         StatsService service = new StatsService();
 
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 15;
 
         long actual = service.averageSales(purchases);
@@ -34,7 +33,6 @@ class StatsServiceTest {
     void maxSalesMonth() {
         StatsService service = new StatsService();
 
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 8;
 
         int actual = service.maxSalesMonth(purchases);
@@ -46,7 +44,6 @@ class StatsServiceTest {
     void minSalesMonth() {
         StatsService service = new StatsService();
 
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
 
         int actual = service.minSalesMonth(purchases);
@@ -58,7 +55,6 @@ class StatsServiceTest {
     void numberOfMonthsSalesUnderAverage() {
         StatsService service = new StatsService();
 
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
         int actual = service.numberOfMonthsSalesUnderAverage(purchases);
@@ -70,7 +66,6 @@ class StatsServiceTest {
     void numberOfMonthsSalesOverAverage() {
         StatsService service = new StatsService();
 
-        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
         int actual = service.numberOfMonthsSalesOverAverage(purchases);
